@@ -1,0 +1,13 @@
+
+.mn-brand {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: medium;
+}
+
+.mn-banner {
+    background-image: url('../../static/imgs/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
