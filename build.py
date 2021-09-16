@@ -26,25 +26,37 @@ def _build_index(root = ROOT):
     with open(os.path.join(DEST, 'index.html'), 'w') as fout:
         fout.write(index)
 
-def _build_parts(root = ROOT):
-    logging.info('Building parts')
+def _slug(title):
+    slug = title.replace('Notes', '')
 
+    return slug
+
+def _build_part(title, file, root = ROOT):
+    logging.info('Building ' + title)
+
+    slug = _slug(title)
     # online
-    tmpl = env.get_template('content/music-theory-part-1.html')
+    tmpl = env.get_template(f"content/{ file }.html")
     part = tmpl.render(root = root)
     tmpl = env.get_template('templates/layout.html')
-    part = tmpl.render(title = 'Music Theory Part 1', root = root, main = part, part = True)
-    with open(os.path.join(DEST, 'music-theory-part-1.html'), 'w') as fout:
+    part = tmpl.render(title = title, slug = slug, root = root, main = part, part = True)
+    with open(os.path.join(DEST, f"{ file }.html"), 'w') as fout:
         fout.write(part)
 
     # print
-    tmpl = env.get_template('content/music-theory-part-1.html')
+    tmpl = env.get_template(f"content/{ file }.html")
     part = tmpl.render(root = '../'+root)
     tmpl = env.get_template('templates/print.html')
-    part = tmpl.render(title = 'Music Theory Part 1', root = '../'+root, main = part)
-    with open(os.path.join(DEST, 'print/music-theory-part-1.html'), 'w') as fout:
+    part = tmpl.render(title = title, slug = slug, root = '../'+root, main = part)
+    with open(os.path.join(DEST, f"print/{ file }.html"), 'w') as fout:
         fout.write(part)
 
 # main
 _build_index()
-_build_parts()
+
+content = [
+    ('Music Theory Part 1', 'music-theory-part-1'),
+    ('Music Theory Part 2', 'music-theory-part-2')
+]
+for c in content:
+    _build_part(c[0], c[1])

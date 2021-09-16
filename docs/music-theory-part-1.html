@@ -13,8 +13,11 @@
 <body>
 
     <div class="Header" style="position: fixed; top: 0; left: 0; width: 100vw;">
-  <div class="Header-item Header-item--full">
+  <div class="Header-item">
     <a href="./index.html" class="Header-link" style="text-transform: uppercase; font-weight: 300;">Music Notes</a>
+  </div>
+  <div class="Header-item Header-item--full">
+    Music Theory Part 1
   </div>
   <div class="Header-item">
     <a class="Header-link" href="#"><i class="fas fa-info-circle"></i></a>
@@ -242,6 +245,28 @@
         </section>
 
         <section>
+            <h3>Key Signatures</h3>
+            <ul>
+                <li>Placed on the stave, in the begining of each line of music</li>
+                <li>Remider of the sharps or flats are in the current scale</li>
+            </ul>
+            <br /><br />
+            <table>
+                <thead>
+                    <tr><td>C Major</td><td>G Major</td><td>D Major</td><td>F Major</td></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div id="abc-c-maj-key"></div></td>
+                        <td><div id="abc-g-maj-key"></div></td>
+                        <td><div id="abc-d-maj-key"></div></td>
+                        <td><div id="abc-f-maj-key"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
             <h3>Intervals & Degrees</h3>
             <ul>
                 <li>Interval is the distance in pitch between two notes</li>
@@ -366,7 +391,7 @@
         <section>
             <h3>References</h3>
             <ul>
-                <li><span class="italic">The AB Guide to Music Theory, Part I</span> -- by Eric Tailor</li>
+                <li><span class="italic">The AB Guide to Music Theory</span> -- by Eric Tailor</li>
             </ul>
         </section>
 
@@ -385,6 +410,10 @@
     ABCJS.renderAbc("abc-d-maj", "X:1\nK:C\n\"D\"D8\"E\"E8\"F#\"^F8\"G\"G8\"A\"A8\"B\"B8\"C#\"^c8\"D\"d8\n")
     ABCJS.renderAbc("abc-f-maj", "X:1\nK:C\n\"F\"F8\"G\"G8\"A\"A8\"Bb\"_B8\"C\"c8\"D\"d8\"E\"e8\"F\"f8\n")
     ABCJS.renderAbc("abc-c-deg", "X:1\nK:C\n\"1st\"C8\"2nd\"D8\"3rd\"E8\"4th\"F8\"5th\"G8\"6th\"A8\"7th\"B8\"8th\"c8\n")
+    ABCJS.renderAbc("abc-c-maj-key", "X:1\nK:C\n|\n", { staffwidth: 100 })
+    ABCJS.renderAbc("abc-g-maj-key", "X:1\nK:G\n|\n", { staffwidth: 100 })
+    ABCJS.renderAbc("abc-d-maj-key", "X:1\nK:D\n|\n", { staffwidth: 100 })
+    ABCJS.renderAbc("abc-f-maj-key", "X:1\nK:F\n|\n", { staffwidth: 100 })
 
     Reveal.initialize({
         controlsLayout: 'edges',
@@ -393,7 +422,7 @@
         hash: true,
         embedded: true,
         plugins: [ RevealMenu ],
-        menu: { loadIcons: false }
+        menu: { loadIcons: false, markers: false }
         })
 </script>
 
