@@ -3,11 +3,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #fafafa;
 }
 
-@font-face { font-family: Bravura; src: url('./Bravura.woff'); } 
-@font-face { font-family: BravuraText; src: url('./BravuraText.woff2'); }
-
-.music { font-family: BravuraText; }
-.italic { font-style: italic; }
 .table-min tbody tr { border: 0; }
 .table-min tbody tr td { border: 0; padding: 0.1em 0.1em 0.1em 0.2em; font-size: smaller; }
 

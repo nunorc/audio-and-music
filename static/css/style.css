@@ -1,13 +1,5 @@
 
-.mn-brand {
-    text-transform: uppercase;
-    font-weight: 200;
-    font-size: medium;
-}
+@font-face { font-family: BravuraText; src: url('./BravuraText.woff2'); }
 
-.mn-banner {
-    background-image: url('../../static/imgs/bg.jpg');
-    background-position: center;
-    background-size: cover;
-    color: white;
-}
+.music { font-family: BravuraText; }
+.italic { font-style: italic; }
