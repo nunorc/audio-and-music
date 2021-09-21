@@ -47,7 +47,6 @@
         </table>
       </section>
 
-
       <section>
         <h3>Staves & Bars</h3>
         <ul>
@@ -78,9 +77,9 @@
         <br/><br/>
         <table>
           <tbody>
-            <tr><td><span class="music"></span></td><td>2 quarter note beats per bar</td></tr>
-            <tr><td><span class="music"></span></td><td>3 quarter note beats per bar</td></tr>
-            <tr><td><span class="music"></span></td><td>4 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE082;&#xE09F;&#xE084;</span></td><td>2 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE083;&#xE09F;&#xE084;</span></td><td>3 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE084;&#xE09F;&#xE084;</span></td><td>4 quarter note beats per bar</td></tr>
           </tbody>
         </table>
       </section>
@@ -104,12 +103,13 @@
       <section>
         <h3>Clefs</h3>
         <ul>
-          <li>The treble clef <span class="music">&#xE01A;&#xE050;</span></td> (or G clef)</li>
-          <li>The bass clef <span class="music">&#xE01A;&#xE062;</span></td> (or F clef)</li>
+          <li>Describe the pitch of the notes in the stave</li>
+          <li>The treble (or G) clef symbol is <span class="music">&#xE050;</span></td></li>
+          <li>The bass (or F) clef symbol is <span class="music">&#xE062;</span></td></li>
+          <li>The vertical position of the clef defines the line for the note</li>
         </ul>
-        <br/>
+        <br/><br/>
         <div id="abc-g-clef"></div>
-        <br/>
         <div id="abc-f-clef"></div>
       </section>
 
@@ -250,15 +250,12 @@
 
       <section>
         <h3>Triads</h3>
-        <ul>
-          <li>Groups of three notes:
-            <ol>
-              <li>The tonic: 1st degree of the scale</li>
-              <li>The 3rd degree of the scale</li>
-              <li>And, the 5th degree of the scale</li>
-            </ol>
-          </li>
-        </ul>
+        <pm>Groups of three notes:</p>
+        <ol>
+          <li>The 1st degree of the scale, the tonic</li>
+          <li>The 3rd degree of the scale</li>
+          <li>And, the 5th degree of the scale</li>
+        </ol>
       </section>
 
       <section>
@@ -374,7 +371,9 @@
 <script src="{{ root }}/static/reveal/reveal.js"></script>
 <script src="{{ root }}/static/reveal/menu.js"></script>
 <script>
-  ABCJS.renderAbc("abc-stave", "X:1\ncde|abc|dec|cde|acb|\n")
+  ABCJS.renderAbc('abc-stave', 'X:1\ncde|abc|dec|cde|acb|\n')
+  ABCJS.renderAbc('abc-g-clef', 'X:1\nK:treble\n"E"E8"F"F8"G"G8"A"A8"B"B8"C"c8"D"d8"E"e8"F"f8\n')
+  ABCJS.renderAbc('abc-f-clef', 'X:1\nK:bass\n"G"G,,8"A"A,,8"B"B,,8"C"C,8"D"D,8"E"E,8"F"F,8"G"G,8"A"A,8\n')
   ABCJS.renderAbc("abc-c-maj", "X:1\nK:C\n\"C\"C8\"D\"D8\"E\"E8\"F\"F8\"G\"G8\"A\"A8\"B\"B8\"C\"c8\n")
   ABCJS.renderAbc("abc-g-maj", "X:1\nK:C\n\"G\"G8\"A\"A8\"B\"B8\"C\"c8\"D\"d8\"E\"e8\"F#\"^f8\"G\"g8\n")
   ABCJS.renderAbc("abc-d-maj", "X:1\nK:C\n\"D\"D8\"E\"E8\"F#\"^F8\"G\"G8\"A\"A8\"B\"B8\"C#\"^c8\"D\"d8\n")
