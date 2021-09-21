@@ -21,7 +21,7 @@ def _build_index(root = ROOT):
     tmpl = env.get_template('templates/index.html')
     index = tmpl.render(root = root)
     tmpl = env.get_template('templates/layout.html')
-    index = tmpl.render(title = 'Music Notes', root = root, main = index, part = False)
+    index = tmpl.render(title = 'A & M', root = root, main = index, part = False)
 
     with open(os.path.join(DEST, 'index.html'), 'w') as fout:
         fout.write(index)
