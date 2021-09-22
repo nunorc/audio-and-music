@@ -68,6 +68,24 @@
       </section>
 
       <section>
+        <h3>Tempo</h3>
+        <ul>
+          <li>Tempo describes the steady pulse of the music</li>
+          <li>Described using terms like <span class="italic">adagio</span> (slow) or <span class="italic">allegro</span> (fast)</li>
+          <li>Beats per minute (BPM) give a more accurate description</li>
+        </ul>
+        <br/><br/>
+        <table>
+          <tbody>
+            <tr><td><span class="music">&#xECA5;</span><span style="font-size: smaller;"> = 116</span></td>
+                <td align="left">116 quarter note beats per minute</td></tr>
+            <tr><td><span class="music">&#xECA7;</span><span style="font-size: smaller;"> = 60</span></td>
+                <td align="left">60 eight notes beats per minute</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
         <h3>Time Signatures</h3>
         <ul>
           <li>Describe the tempo</li>
@@ -77,9 +95,13 @@
         <br/><br/>
         <table>
           <tbody>
-            <tr><td><span class="music">&#xE09E;&#xE082;&#xE09F;&#xE084;</span></td><td>2 quarter note beats per bar</td></tr>
-            <tr><td><span class="music">&#xE09E;&#xE083;&#xE09F;&#xE084;</span></td><td>3 quarter note beats per bar</td></tr>
-            <tr><td><span class="music">&#xE09E;&#xE084;&#xE09F;&#xE084;</span></td><td>4 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE082;&#xE09F;&#xE084;</span></td>
+                <td align="left">2 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE083;&#xE09F;&#xE084;</span></td>
+                <td align="left">3 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE084;&#xE09F;&#xE084;</span></td>
+                <td align="left">4 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xEB9F;&#xE08A;</span></td><td>common time, same as above</td></tr>
           </tbody>
         </table>
       </section>
@@ -134,11 +156,27 @@
       </section>
 
       <section>
-        <h3>Ties & Dots</h3>
+        <h3>Dots</h3>
         <ul>
-          <li>Ties join notes that sound the same into one</li>
           <li>Dots after a note or rest make them plus half as long</li>
         </ul>
+        <p>
+          <span class="music">&#xECA3;</span><span class="music" style="padding-left: 4px;">&#xECB7;</span> <span style="font-size: smaller;">=</span> <span class="music">&#xECA3;</span> <span style="font-size: smaller;">+</span> <span class="music">&#xECA5;</span>
+          <br/>
+          <span class="music">&#xECA5;</span><span class="music" style="padding-left: 4px;">&#xECB7;</span> <span style="font-size: smaller;">=</span> <span class="music">&#xECA5;</span> <span style="font-size: smaller;">+</span> <span class="music">&#xECA7;</span>
+          <br/>
+          <span class="music">&#xECA7;</span><span class="music" style="padding-left: 4px;">&#xECB7;</span> <span style="font-size: smaller;">=</span> <span class="music">&#xECA7;</span> <span style="font-size: smaller;">+</span> <span class="music">&#xECA9;</span>
+        </p>
+      </section>
+
+      <section>
+        <h3>Ties & Slurs</h3>
+        <ul>
+          <li>Ties join notes that sound the same into one</li>
+          <li>Slurs, smooth transition between different notes (<span class="italic">legato</span>)</li>
+        </ul>
+        <br/><br/>
+        <div id="abc-ties-slurs"></div>
       </section>
 
       <section>
@@ -175,7 +213,7 @@
         <ul>
           <li>Starts and ends on C</li>
           <li>Follows the major scale pattern</li>
-          <li>Doesn't require sharps (<span class="music">#</span>) of flats (<span class="music">b</span>)</li>
+          <li>Doesn't require sharps (<span class="music">&#xE262;</span>) of flats (<span class="music">&#xE260;</span>)</li>
         </ul>
         <br/><br/>
         <div id="abc-c-maj"></div>
@@ -218,7 +256,7 @@
         <h3>Key Signatures</h3>
         <ul>
           <li>Placed on the stave, in the begining of each line of music</li>
-          <li>Remider of the sharps or flats are in the current scale</li>
+          <li>Remider of the sharps and flats in the current scale</li>
         </ul>
         <br /><br />
         <table>
@@ -250,12 +288,25 @@
 
       <section>
         <h3>Triads</h3>
-        <pm>Groups of three notes:</p>
+        <p>Groups of three notes:</p>
         <ol>
           <li>The 1st degree of the scale, the tonic</li>
           <li>The 3rd degree of the scale</li>
           <li>And, the 5th degree of the scale</li>
         </ol>
+        <br /><br />
+        <table>
+          <thead>
+            <tr><td>C Major Triad</td><td>G Major Triad</td><td>D Major Triad</td></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div id="abc-c-maj-triad"></div></td>
+              <td><div id="abc-g-maj-triad"></div></td>
+              <td><div id="abc-d-maj-triad"></div></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section>
@@ -284,21 +335,21 @@
         <h4>Dynamics</h4>
         <table>
           <tbody>
-            <tr><td class="music"><span class="music">&#xE520;&#xE520;&#xE520;</span></td>
+            <tr><td class="music"><span class="music">&#xE52A;</span></td>
                 <td align="left">very very soft</td></tr>
-            <tr><td class="music"><span class="music">&#xE520;&#xE520;</span></td>
+            <tr><td class="music"><span class="music">&#xE52B;</span></td>
                 <td align="left"><span class="italic">pianissimo</span>, very soft</td></tr>
             <tr><td class="music"><span class="music">&#xE520;</span></td>
                 <td align="left"><span class="italic">piano</span>, soft</td></tr>
-            <tr><td class="music"><span class="music">&#xE521;&#xE520;</span></td>
+            <tr><td class="music"><span class="music">&#xE52C;</span></td>
                 <td align="left"><span class="italic">mezzo piano</span>, half soft</td></tr>
-            <tr><td class="music"><span class="music">&#xE521;&#xE522;</span></td>
+            <tr><td class="music"><span class="music">&#xE52D;</span></td>
                 <td align="left"><span class="italic">mezzo forte</span>, half loud</td></tr>
             <tr><td class="music"><span class="music">&#xE522;</span></td>
                 <td align="left"><span class="italic">forte</span>, loud</td></tr>
-            <tr><td class="music"><span class="music">&#xE522;&#xE522;</span></td>
+            <tr><td class="music"><span class="music">&#xE52F;</span></td>
                 <td align="left"><span class="italic">fortissimo</span>, very loud</td></tr>
-            <tr><td class="music"><span class="music">&#xE522;&#xE522;&#xE522;</span></td>
+            <tr><td class="music"><span class="music">&#xE530;</span></td>
                 <td align="left">very very loud</td></tr>
           </tbody>
         </table>
@@ -349,8 +400,12 @@
                 <td align="left"><span class="italic">crescendo</span>, gradually getting louder</td></tr>
             <tr><td><span class="music">&#xE53F;</span></td>
                 <td align="left"><span class="italic">diminuendo</span>, gradually getting quieter</td></tr>
-            <tr><td><span class="music">&#xE4A0;</span></td>
+            <tr><td><span class="music">&#xEB99;&#xE1D5;&#xEB9B;&#xE4A1;</span></td>
                 <td align="left">accent</td></tr>
+            <tr><td><span class="music">&#xEB99;&#xE1D5; &#xEB9B;&#xE4A3;</span></td>
+                <td align="left"><span class="italic">staccato</span></td></tr>
+            <tr><td><span class="music">&#xEB9B;&#xE4C1; &#xEB99;&#xE1D5;</span></td>
+                <td align="left"><span class="italic">fermata</span>, pause, hold on the note</td></tr>
           </tbody>
         </table>
       </section>
@@ -374,15 +429,19 @@
   ABCJS.renderAbc('abc-stave', 'X:1\ncde|abc|dec|cde|acb|\n')
   ABCJS.renderAbc('abc-g-clef', 'X:1\nK:treble\n"E"E8"F"F8"G"G8"A"A8"B"B8"C"c8"D"d8"E"e8"F"f8\n')
   ABCJS.renderAbc('abc-f-clef', 'X:1\nK:bass\n"G"G,,8"A"A,,8"B"B,,8"C"C,8"D"D,8"E"E,8"F"F,8"G"G,8"A"A,8\n')
-  ABCJS.renderAbc("abc-c-maj", "X:1\nK:C\n\"C\"C8\"D\"D8\"E\"E8\"F\"F8\"G\"G8\"A\"A8\"B\"B8\"C\"c8\n")
-  ABCJS.renderAbc("abc-g-maj", "X:1\nK:C\n\"G\"G8\"A\"A8\"B\"B8\"C\"c8\"D\"d8\"E\"e8\"F#\"^f8\"G\"g8\n")
-  ABCJS.renderAbc("abc-d-maj", "X:1\nK:C\n\"D\"D8\"E\"E8\"F#\"^F8\"G\"G8\"A\"A8\"B\"B8\"C#\"^c8\"D\"d8\n")
-  ABCJS.renderAbc("abc-f-maj", "X:1\nK:C\n\"F\"F8\"G\"G8\"A\"A8\"Bb\"_B8\"C\"c8\"D\"d8\"E\"e8\"F\"f8\n")
-  ABCJS.renderAbc("abc-c-deg", "X:1\nK:C\n\"1st\"C8\"2nd\"D8\"3rd\"E8\"4th\"F8\"5th\"G8\"6th\"A8\"7th\"B8\"8th\"c8\n")
-  ABCJS.renderAbc("abc-c-maj-key", "X:1\nK:C\n|\n", { staffwidth: 100 })
-  ABCJS.renderAbc("abc-g-maj-key", "X:1\nK:G\n|\n", { staffwidth: 100 })
-  ABCJS.renderAbc("abc-d-maj-key", "X:1\nK:D\n|\n", { staffwidth: 100 })
-  ABCJS.renderAbc("abc-f-maj-key", "X:1\nK:F\n|\n", { staffwidth: 100 })
+  ABCJS.renderAbc('abc-ties-slurs', 'X:1\nK:C\n"Tie"A2-A2 "Tie"B2-B2 "Tie"C2-C2 "Slur"(A2 C2) "Slur"(D2 G2) "Slur"(A2 G2)\n')
+  ABCJS.renderAbc('abc-c-maj', 'X:1\nK:C\n"C"C8"D"D8"E"E8"F"F8"G"G8"A"A8"B"B8"C"c8\n')
+  ABCJS.renderAbc('abc-g-maj', 'X:1\nK:C\n"G"G8"A"A8"B"B8"C"c8"D"d8"E"e8"F#"^f8"G"g8\n')
+  ABCJS.renderAbc('abc-d-maj', 'X:1\nK:C\n"D"D8"E"E8"F#"^F8"G"G8"A"A8"B"B8"C#"^c8"D"d8\n')
+  ABCJS.renderAbc('abc-f-maj', 'X:1\nK:C\n"F"F8"G"G8"A"A8"Bb"_B8"C"c8"D"d8"E"e8"F"f8\n')
+  ABCJS.renderAbc('abc-c-deg', 'X:1\nK:C\n"1st"C8"2nd"D8"3rd"E8"4th"F8"5th"G8"6th"A8"7th"B8"8th"c8\n')
+  ABCJS.renderAbc('abc-c-maj-key', 'X:1\nK:C\n|\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-g-maj-key', 'X:1\nK:G\n|\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-d-maj-key', 'X:1\nK:D\n|\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-f-maj-key', 'X:1\nK:F\n|\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-c-maj-triad', 'X:1\nK:C\n[CEG]8\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-g-maj-triad', 'X:1\nK:C\n[GBd]8\n', { staffwidth: 100 })
+  ABCJS.renderAbc('abc-d-maj-triad', 'X:1\nK:C\n[dfa]8\n', { staffwidth: 100 })
 
   Reveal.initialize({
       controlsLayout: 'edges',
