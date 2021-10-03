@@ -43,6 +43,8 @@
           <li>Extensions of the stave</li>
           <li>Middle C anchors the treble and bass clef</li>
         </ul>
+        <br/><br/>
+        <div id="abc-middle-c"></div>
       </section>
 
       <section>
@@ -55,9 +57,10 @@
         <br/><br/>
         <table>
           <tbody>
-            <tr><td><span class="music"></span></td><td>2 quarter note beats per bar</td></tr>
-            <tr><td><span class="music"></span></td><td>3 quarter note beats per bar</td></tr>
-            <tr><td><span class="music"></span></td><td>4 quarter note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE082;&#xE09F;&#xE082;</span></td><td>2 half note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE083;&#xE09F;&#xE082;</span></td><td>3 half note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE084;&#xE09F;&#xE082;</span></td><td>4 half note beats per bar</td></tr>
+            <tr><td><span class="music">&#xE09E;&#xE083;&#xE09F;&#xE088;</span></td><td>3 eight note beats per bar</td></tr>
           </tbody>
         </table>
       </section>
@@ -101,42 +104,69 @@
           <li>Starts and ends on E</li>
           <li>Follows the major scale pattern</li>
           <li>Requires a B<span class="music">&#xE260;</span>, E<span class="music">&#xE260;</span> and
-              G<span class="music">&#xE260;</span></li>
+              A<span class="music">&#xE260;</span></li>
         </ul>
         <br/><br/>
         <div id="abc-e-flat-maj"></div>
       </section>
 
       <section>
-        <h3>Harmonic Minor Scales</h3>
+        <h3>Minor Scales</h3>
         <ul>
-          <li>Harmonic minor scales share a key signature with a major scale</li>
-          <li>Start with the related major scale</li>
-          <li>The 7th degree of the scale is raised by a semitone</li>
+          <li>Three flavours of minor scales</li>
+          <li>Natural (or relative) minor: follow the relative key signature</li>
+          <li>Harmonic minor: 6th degree of the natural minor is raised</li>
+          <li>Melodic minor: different ascending descending</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Natural Minor Scales</h3>
+        <ul>
+          <li>Follow the related major key signature</li>
+          <li>Same notes as the descending melodic scale</li>
+          <li>3rd note couting dounw from the major</li>
         </ul>
         <br /><br /> 
         <table>
           <thead>
-            <th>Major Scale</th><th>Harmonic Minor Scale</th>
+            <th>Major Scale</th><th>Natural Minor Scale</th>
           </thead>
           <tbody>
             <tr><td>C Major</td><td>A Minor</td></tr>
             <tr><td>G Major</td><td>E Minor</td></tr>
-            <tr><td>F Major</td><td>D Minor</td></tr>
+            <tr><td>D Major</td><td>B Minor</td></tr>
           </tbody>
         </table>
       </section>
 
       <section>
-        <h3>Harmonic A Minor Scale</h3>
+        <h3>Harmonic Minor Scales</h3>
         <ul>
-          <li>Starts and ends on A</li>
-          <li>Uses the notes from C Major</li>
-          <li>Doesn't require sharps (<span class="music">#</span>) of flats (<span class="music">b</span>)</li>
-          <li>The 7th degree, G, is raised by a semitone with a sharp</li>
+          <li>A scale is any predefined series of notes</li>
+          <li>The distance between notes defines the tonality of the scale</li>
+          <li>The distance can be a whole tone (T) or a semitone (S)</li>
+          <li>Harmonic minor scales pattern is T-S-T-T-S-3S-S</li>
         </ul>
-        <br/><br/>
-        <div id="abc-harm-a-min"></div>
+      </section>
+
+      <section>
+        <h3>Melodic Minor Scales</h3>
+        <ul>
+          <li>Use the harmonic minor scale as a starting point</li>
+          <li>Ascending: raise the 6th degree by a semitone</li>
+          <li>Descending: lower the 7th degree by a semitone</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>A Minor Scales</h3>
+        <span>Natural (or Relative)</span>
+        <div id="abc-natural-a-min"></div>
+        <span>Harmonic</span>
+        <div id="abc-harmonic-a-min"></div>
+        <span>Melodic</span>
+        <div id="abc-melodic-a-min"></div>
       </section>
 
       <section>
@@ -155,10 +185,14 @@
 <script src="./static/reveal/reveal.js"></script>
 <script src="./static/reveal/menu.js"></script>
 <script>
+  ABCJS.renderAbc('abc-middle-c', 'X:1\nV:T1 clef=treble\nV:B1 clef=bass\nK\n[V:T1]"Middle C"C8\n[V:B1]C8', { staffwidth: 100 })
   ABCJS.renderAbc("abc-triplets", "X:1\nK:C\n\(3AAA (3BBB (3CCC (3GGG(3AAA\n")
   ABCJS.renderAbc("abc-a-maj", "X:1\nK:C\n\"A\"A8\"B\"B8\"C#\"^c8\"D\"d8\"E\"e8\"F#\"^f8\"G#\"^g8\"A\"a8\n")
   ABCJS.renderAbc("abc-b-flat-maj", "X:1\nK:C\n\"Bb\"_B,8\"C\"C8\"D\"D8\"Eb\"_E8\"F\"F8\"G\"G8\"A\"A8\"Bb\"_B8\n")
-  ABCJS.renderAbc("abc-e-flat-maj", "X:1\nK:C\n\"Eb\"_E8\"F\"F8\"Gb\"_G8\"A\"A8\"Bb\"_B8\"C\"c8\"D\"d8\"Eb\"_e8\n")
+  ABCJS.renderAbc("abc-e-flat-maj", "X:1\nK:C\n\"Eb\"_E8\"F\"F8\"G\"G8\"Ab\"_A8\"Bb\"_B8\"C\"c8\"D\"d8\"Eb\"_e8\n")
+  ABCJS.renderAbc("abc-natural-a-min", 'X:1\nK:C\n"A"A8"B"B8"C"c8"D"d8"E"e8"F"f8"G"g8"A"a8|"A"a8"G"g8"F"f8"E"e8"D"d8"C"c8"B"B8"A"A8\n')
+  ABCJS.renderAbc("abc-harmonic-a-min", 'X:1\nK:C\n"A"A8"B"B8"C"c8"D"d8"E"e8"F"f8"G#"^g8"A"a8|"A"a8"G#"^g8"F"f8"E"e8"D"d8"C"c8"B"B8"A"A8\n')
+  ABCJS.renderAbc("abc-melodic-a-min", 'X:1\nK:C\n"A"A8"B"B8"C"c8"D"d8"E"e8"F#"^f8"G#"^g8"A"a8|"A"a8"G"g8"F"f8"E"e8"D"d8"C"c8"B"B8"A"A8\n')
 
   Reveal.initialize({
       controlsLayout: 'edges',
