@@ -7,6 +7,11 @@ A collection of summaries, notes and handbooks on music.
 
 Available from: https://nunorc.github.io/audio-and-music/.
 
+### Other Resources
+
+* https://abc.rectanglered.com/
+* https://mymusictheory.com
+
 ## Acknowledgements
 
 Powered by:
@@ -16,7 +21,6 @@ Powered by:
 * https://revealjs.com/
 * https://github.com/denehyg/reveal.js-menu
 * https://github.com/steinbergmedia/bravura
-
 
 ## License
 
